@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+class OlaCidade extends React.Component {
+  render() {
+    const {cidadeNome} = this.props;
+
+    return (
+      <h1>Olá, a cidade da vez é {cidadeNome}.</h1>
+    )
+  }
+
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <OlaCidade cidadeNome="floripa" />
+      <OlaCidade cidadeNome="blumenoia" />
+      <OlaCidade cidadeNome="biguacity" />
+      <OlaCidade cidadeNome="paliosa" />
     </div>
   );
 }
